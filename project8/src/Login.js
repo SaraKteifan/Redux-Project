@@ -19,6 +19,8 @@ function Login() {
     const[email,setEmail]=useState('');
     const[password,setPassword]=useState('');
 
+
+    document.body.style.overflow='hidden';
   return (
     <div className="login-form">
     <form>

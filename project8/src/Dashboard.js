@@ -21,7 +21,8 @@ class Users extends Component {
     handleButton(id){
         // event.preventDefault();
         
-        document.getElementById(id).style.display="none";   
+        // document.getElementById(id).style.display="none";   
+        this.props.deleting(id);
     }
     render() {
         const {users} = this.props.users
@@ -81,24 +82,7 @@ class Users extends Component {
                   <div className="project-box-header">
                     <span></span>
                     <div className="more-wrapper">
-                      <button className="project-btn-more">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={24}
-                          height={24}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="feather feather-more-vertical"
-                        >
-                          <circle cx={12} cy={12} r={1} />
-                          <circle cx={12} cy={5} r={1} />
-                          <circle cx={12} cy={19} r={1} />
-                        </svg>
-                      </button>
+                      
                     </div>
                   </div>
                   <div className="project-box-content-header">
@@ -111,7 +95,7 @@ class Users extends Component {
                       
                       
                     </div>
-                    <div className="days-left" id='deleteBtn' style={{ color: "#ff942e" }} onClick={()=>this.handleButton(u.city)}>
+                    <div className="days-left" id='deleteBtn' style={{ color: "#ff942e" }} onClick={()=>this.handleButton(users.indexOf(u))}>
                       Delete
                     </div>
                   </div>

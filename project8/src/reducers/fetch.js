@@ -17,10 +17,11 @@ export default function(state = initialState, action){
 
         }
         case 'deleting':
-            let newUsers= state.users.remove(action.index)
+            state.users.splice(action.index,1)
+            console.log(action.index);
             return{
                 ...state,
-                users:newUsers,
+                users:state.users,
                 loading:false
             }
         default: return state

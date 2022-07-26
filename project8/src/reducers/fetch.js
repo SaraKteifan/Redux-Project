@@ -16,6 +16,13 @@ export default function(state = initialState, action){
             loading:false
 
         }
+        case 'deleting':
+            let newUsers= state.users.remove(action.index)
+            return{
+                ...state,
+                users:newUsers,
+                loading:false
+            }
         default: return state
     }
 

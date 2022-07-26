@@ -53,3 +53,17 @@ export const getUsers = () => async dispatch => {
     }
 
 }
+
+export const logout=()=> dispatch => {
+
+    dispatch( {
+        type: 'logout',
+    })
+    window.location.href = "/";
+}
+export const deleting=(index)=> dispatch => {
+    dispatch( {
+        type: 'deleting',
+        index
+    })
+}

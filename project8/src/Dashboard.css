@@ -54,7 +54,7 @@ body {
 
 body {
   font-family: "DM Sans", sans-serif;
-  overflow: scroll;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   background-color: #f2f1ef;
@@ -686,7 +686,9 @@ a {
   padding: 6px 16px;
   font-weight: 700;
 }
-
+ #deleteBtn:hover{
+    cursor: pointer;
+}
 .mode-switch.active .moon {
   fill: var(--main-color);
 }

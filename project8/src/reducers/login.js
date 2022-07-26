@@ -21,6 +21,11 @@ export default function(state = initialState, action){
                     loading:false,
                 }
             }
+        case 'logout':
+            return{...state,
+                admin:'',
+                error: '',
+            }
         default: return state
     }
 
